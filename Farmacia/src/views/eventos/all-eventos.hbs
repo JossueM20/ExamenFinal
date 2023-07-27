@@ -1,0 +1,29 @@
+<div class="container">
+    {{#each eventos}}
+    <div class="col-md">
+        <div class="card">
+            <div class="card-body">
+                <img src="{{path}}" alt="" class="card-img-top">
+                <br><br>
+                <div class="car-body">
+                    <h5 class="card-title"> {{titulo}} </h5>
+                    <p class="card-text"> {{descripcion}} </p>
+                </div>
+                <br>
+                <div class="form-group">
+                    <a href="/evento/edit/{{_id}}" class="btn btn-primary">Editar</a>
+                </div>
+                <div class="form-group">
+                    <form action="/evento/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger">
+                            Eliminar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    {{/each}}
+</div>

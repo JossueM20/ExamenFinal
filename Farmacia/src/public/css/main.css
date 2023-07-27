@@ -1,0 +1,15 @@
+body {
+    background: turquoise;
+}
+
+.logo {
+    width: 30%;
+}
+
+.encuesta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
